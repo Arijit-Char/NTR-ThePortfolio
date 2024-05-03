@@ -1,17 +1,17 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Header from '../components/Header';
-import Hero from '../components/Hero';
 import About from '../components/About';
-import Services from '../components/Services';
 import Skills from '../components/Skills';
-import Projects from '../components/Projects';
-import Timeline from '../components/Timeline';
 import Testimonial from '../components/Testimonial';
 import Contact from '../components/Contact';
 import parse from 'html-react-parser';
+import Layout from '../layout/Layout';
+
 // import UserContext from '../userContext/userContext';
 import PreLoader from '../components/preloader';
+import Portfolio from '../components/Portfolio';
+import Process from '../components/Process';
 
 function Home({ dark }) {
     const params = useParams();
@@ -103,6 +103,9 @@ function Home({ dark }) {
     console.log(sortedFilteredSkills);
     return (
         <>
+            <Header>
+                <title>Dizme | Home</title>
+            </Header>
             <div className="dizme_tm_section" id="home">
                 <div className="dizme_tm_hero">
                     <div className="background" data-img-url={`../../public/img/slider/${dark ? 2 : 1}.jpg`} />
@@ -186,15 +189,31 @@ function Home({ dark }) {
                     </div>
                 </div>
             </div>
-            <Header />
-            <Hero />
-            <About />
-            <Skills />
-            <Projects />
-            <Services />
-            <Timeline />
-            <Testimonial />
-            <Contact />
+            {/* PROCESS */}
+            <Process />
+            {/* /PROCESS */}
+            {/* ABOUT */}
+            <About about={about}/>
+            {/* /ABOUT */}
+            {/* PORTFOLIO */}
+            {/* <Portfolio /> */}
+            {/* /PORTFOLIO */}
+            {/* SKILLS */}
+            {/* <Skills /> */}
+            {/* /SKILLS */}
+            {/* SERVICES */}
+            {/* <Service /> */}
+            {/* /SERVICES */}
+            {/* TESTIMONIALS */}
+            {/* <Testimonial /> */}
+            {/* /TESTIMONIALS */}
+            {/* PARTNERS */}
+            {/* <Partners /> */}
+            {/* /PARTNERS */}
+            {/* NEWS */}
+            {/* <News /> */}
+            {/* <Newsletter /> */}
+            {/* <Contact />  */}
         </>
     );
 }
