@@ -196,7 +196,7 @@ function Home({ dark }) {
             <About about={about}/>
             {/* /ABOUT */}
             {/* PORTFOLIO */}
-            {/* <Portfolio /> */}
+            <Portfolio projects={sortedFilteredProject}/>
             {/* /PORTFOLIO */}
             {/* SKILLS */}
             {/* <Skills /> */}

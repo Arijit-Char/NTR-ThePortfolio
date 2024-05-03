@@ -5,14 +5,15 @@ import DetailsPopup from './popup/DetailsPopup';
 import PreLoader from './preloader';
 import WOW from 'wowjs';
 
-const Portfolio = () => {
+const Portfolio = ({projects}) => {
+    console.log(projects);
     const [data, setData] = useState([]);
     const [techStack, setTechStack] = useState();
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        setData(data1?.projects?.filter((item) => item.enabled)?.sort((a, b) => a.sequence - b.sequence)); //filtering data based on enabled property.
+        setData(projects?.filter((item) => item.enabled)?.sort((a, b) => a.sequence - b.sequence)); //filtering data based on enabled property.
         setLoading(false);
-    }, [data1]);
+    }, [projects]);
 
     useEffect(() => {
         dataImage();
