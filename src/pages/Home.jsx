@@ -193,13 +193,13 @@ function Home({ dark }) {
             <Process />
             {/* /PROCESS */}
             {/* ABOUT */}
-            <About about={about}/>
+            <About about={about} />
             {/* /ABOUT */}
             {/* PORTFOLIO */}
-            <Portfolio projects={sortedFilteredProject}/>
+            <Portfolio projects={sortedFilteredProject} />
             {/* /PORTFOLIO */}
             {/* SKILLS */}
-            {/* <Skills /> */}
+            <Skills data={sortedFilteredSkills} about = {about} />
             {/* /SKILLS */}
             {/* SERVICES */}
             {/* <Service /> */}
