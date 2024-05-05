@@ -12,6 +12,7 @@ import Layout from '../layout/Layout';
 import PreLoader from '../components/preloader';
 import Portfolio from '../components/Portfolio';
 import Process from '../components/Process';
+import Service from '../components/Service';
 
 function Home({ dark }) {
     const params = useParams();
@@ -202,10 +203,10 @@ function Home({ dark }) {
             <Skills data={sortedFilteredSkills} about = {about} />
             {/* /SKILLS */}
             {/* SERVICES */}
-            {/* <Service /> */}
+            <Service services={filteredServices} />
             {/* /SERVICES */}
             {/* TESTIMONIALS */}
-            {/* <Testimonial /> */}
+            <Testimonial data={filteredTestimonials}/>
             {/* /TESTIMONIALS */}
             {/* PARTNERS */}
             {/* <Partners /> */}

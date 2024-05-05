@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { activeSkillProgress, fatchData } from "../utilits";
 import {animate, motion} from 'framer-motion';
 import { fadeIn } from '../components/variants';
+import VanillaTilt from 'vanilla-tilt';
 
 const Skills = ({ dark,data,about }) => {
 
@@ -10,7 +11,6 @@ const Skills = ({ dark,data,about }) => {
   }, []);
 
   setTimeout(() => {
-    let VanillaTilt = require("vanilla-tilt");
     VanillaTilt.init(document.querySelectorAll(".tilt-effect"), {
       maxTilt: 6,
       easing: "cubic-bezier(.03,.98,.52,.99)",
