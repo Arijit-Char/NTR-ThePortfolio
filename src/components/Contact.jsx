@@ -10,7 +10,6 @@ const Contact = ({ about }) => {
     if (loading) {
         return <Preloader />;
     }
-    console.log(about);
 
     return (
         <div className="dizme_tm_section" id="contact">

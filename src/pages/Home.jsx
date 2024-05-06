@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import Header from '../components/Header';
 import About from '../components/About';
 import Skills from '../components/Skills';
 import Testimonial from '../components/Testimonial';
 import parse from 'html-react-parser';
 import Layout from '../layout/Layout';
+import Head from 'next/head';
 
 // import UserContext from '../userContext/userContext';
 import PreLoader from '../components/preloader';
@@ -104,10 +104,11 @@ function Home({ dark }) {
         return <PreLoader />;
     }
     return (
-        <>
-            <Header>
+        <Layout about={about}>
+            <Head>
                 <title>Dizme | Home</title>
-            </Header>
+            </Head>
+
             <div className="dizme_tm_section" id="home">
                 <div className="dizme_tm_hero">
                     <div className="background" data-img-url={`../../public/img/slider/${dark ? 2 : 1}.jpg`} />
@@ -201,22 +202,22 @@ function Home({ dark }) {
             <Portfolio projects={sortedFilteredProject} />
             {/* /PORTFOLIO */}
             {/* SKILLS */}
-            <Skills data={sortedFilteredSkills} about = {about} />
+            <Skills data={sortedFilteredSkills} about={about} />
             {/* /SKILLS */}
             {/* SERVICES */}
             <Service services={filteredServices} />
             {/* /SERVICES */}
             {/* TESTIMONIALS */}
-            <Testimonial data={filteredTestimonials}/>
+            <Testimonial data={filteredTestimonials} />
             {/* /TESTIMONIALS */}
             {/* PARTNERS */}
             <Partners social_handles={filteredSocialHandles} />
             {/* /PARTNERS */}
             {/* NEWS */}
-            <News data1={user}/>
+            <News data1={user} />
             <Newsletter />
-            <Contact about={about} /> 
-        </>
+            <Contact about={about} />
+        </Layout>
     );
 }
 

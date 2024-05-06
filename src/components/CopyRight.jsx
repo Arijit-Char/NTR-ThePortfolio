@@ -1,4 +1,4 @@
-const CopyRight = ({ brandName }) => {
+const CopyRight = () => {
     return (
         <div className="dizme_tm_section">
             <div className="dizme_tm_copyright">
@@ -7,7 +7,7 @@ const CopyRight = ({ brandName }) => {
                         <div className="left wow fadeInLeft" data-wow-duration="1s">
                             <p>
                                 Developed with love by{' '}
-                                <a href="https://themeforest.net/user/codeefly" target="_blank" rel="noreferrer">
+                                <a href="" target="_blank" rel="noreferrer">
                                     {/* {data?.username} */}
                                 </a>{' '}
                                 {/* © {new Date(data?.createdAt).getFullYear()} */}

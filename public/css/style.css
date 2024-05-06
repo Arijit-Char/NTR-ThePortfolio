@@ -2868,6 +2868,7 @@ input[type="number"] {
   .dizme_tm_header .logo img {
     max-width: 110px;
     max-height: 70px;
+    border-radius: 50%;
   }
   .dizme_tm_header .menu ul li {
     margin-right: 30px;
