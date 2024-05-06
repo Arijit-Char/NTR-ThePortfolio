@@ -1,47 +1,112 @@
-import { Link } from 'react-scroll';
+import React from 'react';
+import { Link, animateScroll as scroll, scroller } from 'react-scroll';
 
 const Header = ({ logo }) => {
+    const scrollTo = (target) => {
+        scroller.scrollTo(target, {
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart',
+        });
+    };
+
     return (
         <div className="dizme_tm_header">
             <div className="container">
                 <div className="inner">
                     <div className="logo">
-                        <a href="/">{<img src={logo} alt="image" />}</a>
+                        <Link
+                            to="home"
+                            onClick={() => {
+                                scroll.scrollToTop();
+                            }}
+                        >
+                            {logo && <img src={logo} alt="image" />}
+                        </Link>
                     </div>
                     <div className="menu">
                         <ul className="anchor_nav">
-                            <li className="current">
-                                <Link to="home" spy={true} smooth={true} hashSpy={true} offset={30} duration={300} delay={300}>
+                            <li>
+                                <Link
+                                    to="home"
+                                    spy={true}
+                                    smooth={true}
+                                    duration={800}
+                                    activeClass="active"
+                                    onClick={() => scrollTo('home')}
+                                >
                                     Home
                                 </Link>
                             </li>
                             <li>
-                                <Link to="about" spy={true} smooth={true} hashSpy={true} offset={30} duration={300} delay={300}>
+                                <Link
+                                    to="about"
+                                    spy={true}
+                                    smooth={true}
+                                    duration={800}
+                                    activeClass="active"
+                                    onClick={() => scrollTo('about')}
+                                >
                                     About
                                 </Link>
                             </li>
                             <li>
-                                <Link to="portfolio" spy={true} smooth={true} hashSpy={true} offset={30} duration={300} delay={300}>
+                                <Link
+                                    to="portfolio"
+                                    spy={true}
+                                    smooth={true}
+                                    duration={800}
+                                    activeClass="active"
+                                    onClick={() => scrollTo('portfolio')}
+                                >
                                     Portfolio
                                 </Link>
                             </li>
                             <li>
-                                <Link to="service" spy={true} smooth={true} hashSpy={true} offset={30} duration={300} delay={300}>
+                                <Link
+                                    to="service"
+                                    spy={true}
+                                    smooth={true}
+                                    duration={800}
+                                    activeClass="active"
+                                    onClick={() => scrollTo('service')}
+                                >
                                     Service
                                 </Link>
                             </li>
                             <li>
-                                <Link to="blog" spy={true} smooth={true} hashSpy={true} offset={30} duration={300} delay={300}>
+                                <Link
+                                    to="blog"
+                                    spy={true}
+                                    smooth={true}
+                                    duration={800}
+                                    activeClass="active"
+                                    onClick={() => scrollTo('blog')}
+                                >
                                     Blog
                                 </Link>
                             </li>
                             <li>
-                                <Link to="contact" spy={true} smooth={true} hashSpy={true} offset={30} duration={300} delay={300}>
+                                <Link
+                                    to="contact"
+                                    spy={true}
+                                    smooth={true}
+                                    duration={800}
+                                    activeClass="active"
+                                    onClick={() => scrollTo('contact')}
+                                >
                                     Contact
                                 </Link>
                             </li>
                             <li className="download_cv">
-                                <Link to="portfolio">
+                                <Link
+                                    to="portfolio"
+                                    spy={true}
+                                    smooth={true}
+                                    duration={800}
+                                    activeClass="active"
+                                    onClick={() => scrollTo('portfolio')}
+                                >
                                     <span>Download CV</span>
                                 </Link>
                             </li>
@@ -49,7 +114,13 @@ const Header = ({ logo }) => {
                     </div>
                 </div>
             </div>
+            <style jsx>{`
+                .anchor_nav .active {
+                    color: #f75023 !important;
+                }
+            `}</style>
         </div>
     );
 };
+
 export default Header;
