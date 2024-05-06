@@ -92,12 +92,7 @@ const Portfolio = ({ projects }) => {
                         </ul>
                     </div>
                 </div>
-                <div className="brush_1 wow zoomIn" data-wow-duration="1s">
-                    <img src="img/brushes/portfolio/1.png" alt="Brush" />
-                </div>
-                <div className="brush_2 wow fadeInRight" data-wow-duration="1s">
-                    <img src="img/brushes/portfolio/2.png" alt="Brush" />
-                </div>
+             
             </div>
         </div>
     );

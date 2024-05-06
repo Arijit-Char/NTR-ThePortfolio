@@ -24,6 +24,7 @@ const Service = ({ dark, services }) => {
         setPopup(true);
         setPopupdata(data && data[index]);
     };
+    console.log(data);
     return (
         <div className="dizme_tm_section" id="service">
             <ServicePopup data={popupdata} open={popup} close={() => setPopup(false)} />
@@ -31,11 +32,11 @@ const Service = ({ dark, services }) => {
                 <div className="container">
                     <div className="dizme_tm_main_title" data-align="center">
                         <span>Services</span>
-                        <h3>What I Do for Clients</h3>
+                       
                     </div>
                     <div className="service_list">
                         <ul>
-                            {data &&
+                            {
                                 data.map(
                                     (data, i) =>
                                         data && (
@@ -70,12 +71,6 @@ const Service = ({ dark, services }) => {
                                 )}
                         </ul>
                     </div>
-                </div>
-                <div className="brush_1 wow fadeInLeft" data-wow-duration="1s">
-                    <img src="img/brushes/service/5.png" alt="image" />
-                </div>
-                <div className="brush_2 wow zoomIn" data-wow-duration="1s">
-                    <img src="img/brushes/service/6.png" alt="image" />
                 </div>
             </div>
         </div>

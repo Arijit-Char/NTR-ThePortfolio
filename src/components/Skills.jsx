@@ -3,6 +3,7 @@ import { activeSkillProgress, fatchData } from "../utilits";
 import {animate, motion} from 'framer-motion';
 import { fadeIn } from '../components/variants';
 import VanillaTilt from 'vanilla-tilt';
+import { Link } from "react-scroll";
 
 const Skills = ({ dark,data,about }) => {
 
@@ -86,7 +87,7 @@ const Skills = ({ dark,data,about }) => {
                   <div className="contentt">
                     <img className="" src={about?.avatar?.url} alt="image" />  
                     <h2>{about?.name}<br></br><span>{about?.title}</span></h2>
-                    <a href="#">Hire Me</a>
+                    <Link to="contact">Hire Me</Link>
                   </div>
                 </div>
               </div>
