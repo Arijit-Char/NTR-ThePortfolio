@@ -20,7 +20,6 @@ const Skills = ({ dark,data,about }) => {
   }, 1000);
   
 
-  console.log(about);
 
   return (
     <div className="dizme_tm_section">

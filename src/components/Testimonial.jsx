@@ -20,7 +20,6 @@ const Testimonial = ({ data }) => {
         const ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
         return ones[number];
     };
-console.log(data);
     return (
         <div className="dizme_tm_section">
             <div className="dizme_tm_testimonials">

@@ -1042,7 +1042,7 @@ h6 {
 }
 .dizme_tm_portfolio .portfolio_list ul li {
   margin: 0px 0px 25px 0px;
-  width: 33.3333%;
+  width: 30.5%;
   float: left;
   padding-left: 25px;
 }
@@ -2012,12 +2012,12 @@ h6 {
   padding-top: 2px;
   float: left;
   padding-left: 2px;
-  min-width: calc(100% + 12px);
+  min-width: calc(100% + 48px);
 }
 .dizme_tm_partners ul li {
   margin: 0px;
   float: left;
-  width: 25%;
+  width: 24%;
   border: 2px solid #eee;
   text-align: center;
   height: 180px;
@@ -2079,7 +2079,7 @@ h6 {
 }
 .dizme_tm_news ul li {
   margin: 0px 0px 25px 0px;
-  width: 33.3333%;
+  width: 30.5%;
   float: left;
   padding-left: 25px;
 }
@@ -2179,7 +2179,7 @@ h6 {
   z-index: -11;
 }
 .dizme_tm_modalbox .news_popup_informations {
-  width: 100%;
+  width: 92%;
   height: auto;
   clear: both;
   float: left;
@@ -2193,17 +2193,7 @@ h6 {
   opacity: 0;
   min-width: 100%;
 }
-.dizme_tm_modalbox .news_popup_informations .image .main {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-}
+
 .dizme_tm_modalbox .news_popup_informations .details {
   width: 100%;
   float: left;

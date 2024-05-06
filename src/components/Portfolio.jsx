@@ -48,7 +48,6 @@ const Portfolio = ({ projects }) => {
     if (loading) {
         return <PreLoader />;
     }
-console.log(data);
     return (
         <div className="dizme_tm_section" id="portfolio">
             <DetailsPopup open={popup} data={popupData} close={() => setPopup(false)} />

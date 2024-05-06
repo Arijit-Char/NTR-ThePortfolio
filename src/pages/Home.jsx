@@ -4,7 +4,6 @@ import Header from '../components/Header';
 import About from '../components/About';
 import Skills from '../components/Skills';
 import Testimonial from '../components/Testimonial';
-import Contact from '../components/Contact';
 import parse from 'html-react-parser';
 import Layout from '../layout/Layout';
 
@@ -13,6 +12,8 @@ import PreLoader from '../components/preloader';
 import Portfolio from '../components/Portfolio';
 import Process from '../components/Process';
 import Service from '../components/Service';
+import Partners from '../components/Partners';
+import News from '../components/News';
 
 function Home({ dark }) {
     const params = useParams();
@@ -46,7 +47,6 @@ function Home({ dark }) {
 
         fetchUserData();
     }, [params?.user, userId, navigate]);
-    console.log(user);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -101,7 +101,6 @@ function Home({ dark }) {
     if (isLoading || about === undefined) {
         return <PreLoader />;
     }
-    console.log(sortedFilteredSkills);
     return (
         <>
             <Header>
@@ -209,10 +208,10 @@ function Home({ dark }) {
             <Testimonial data={filteredTestimonials}/>
             {/* /TESTIMONIALS */}
             {/* PARTNERS */}
-            {/* <Partners /> */}
+            <Partners social_handles={filteredSocialHandles} />
             {/* /PARTNERS */}
             {/* NEWS */}
-            {/* <News /> */}
+            <News data1={user}/>
             {/* <Newsletter /> */}
             {/* <Contact />  */}
         </>
