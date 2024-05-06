@@ -14,6 +14,8 @@ import Process from '../components/Process';
 import Service from '../components/Service';
 import Partners from '../components/Partners';
 import News from '../components/News';
+import Newsletter from '../components/Newsletter';
+import Contact from '../components/Contact';
 
 function Home({ dark }) {
     const params = useParams();
@@ -212,8 +214,8 @@ function Home({ dark }) {
             {/* /PARTNERS */}
             {/* NEWS */}
             <News data1={user}/>
-            {/* <Newsletter /> */}
-            {/* <Contact />  */}
+            <Newsletter />
+            <Contact about={about} /> 
         </>
     );
 }
