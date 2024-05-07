@@ -8,7 +8,7 @@ const CopyRight = () => {
                             <p>
                                 Developed with love by{' '}
                                 <a href="" target="_blank" rel="noreferrer">
-                                    ThePortfolio
+                                    ThePortfolyo
                                 </a>{' '}
                                 {/* © {new Date(data?.createdAt).getFullYear()} */}
                             </p>
